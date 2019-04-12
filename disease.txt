@@ -234,3 +234,33 @@
 		Decreased range of motion (or flexibility).
 		Swelling.
 
+21. Malaria
+	Symptoms
+		Fever
+		Chills
+		Headache
+		Nausea and vomiting
+		Muscle pain and fatigue
+		Sweating
+		Chest or abdominal pain
+		Cough
+
+22. Measles (Rubeola)
+	Symptoms
+		Fever
+		Dry cough
+		Runny nose
+		Sore throat
+		Inflamed eyes (conjunctivitis)
+
+23. Mumps
+	Symptoms
+		Discomfort in the salivary glands (in the front of the neck)
+		Difficulty chewing
+		Pain and tenderness of the testicles
+		Fever
+		Headache
+		Muscle aches
+		Tiredness
+		Loss of appetite
+
