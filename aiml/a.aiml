@@ -1,0 +1,154 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- a.aiml -->
+	<category>
+		<pattern>HELLO</pattern>
+		<template>
+			<srai>GREETING</srai>
+		</template>
+
+	</category>
+	<category>
+		<pattern>HI</pattern>
+		<template>
+			<srai>GREETING</srai>
+		</template>
+
+	</category>
+	<category>
+		<pattern>HEY</pattern>
+		<template>
+			<srai>GREETING</srai>
+		</template>
+
+	</category>
+    <category>
+        <pattern>GREETING</pattern>
+        <template>
+            Hi! Can you tell me your name?
+
+        </template>
+    </category>
+
+    <category>
+    		<pattern>MY NAME IS *</pattern>
+    		<template>
+    			Okay, How old are you?
+    			<think><set name = "name"><star/></set></think>
+    		</template>
+    </category>
+
+
+    	<category>
+    		<pattern>I AM *</pattern>
+    		<template>
+    			<think><set name = "age"><star/></set></think>
+    			What is your sex? 
+
+
+    		</template>
+    	</category>
+
+    	<category>
+    		<pattern>I AM MALE</pattern>
+    		<template>
+    			<think><set name = "gender">male</set></think>
+    			Tell me about your symptoms?
+    		</template>
+    	</category>
+
+    	<category>
+    		<pattern>I AM FEMALE</pattern>
+    		<template>
+    			<think><set name = "gender">female</set></think>
+    			Tell me about your symptoms?
+    		</template>
+    	</category>
+
+
+
+	<category>
+		<pattern>WHO ARE YOU</pattern>
+		<template>
+			<srai>ABOUT CHATBOT</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>WHAT ARE YOU</pattern>
+		<template>
+			<srai>ABOUT CHATBOT</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>TELL ME ABOUT YOURSELF</pattern>
+		<template>
+			<srai>ABOUT CHATBOT</srai>
+		</template>
+	</category>
+
+
+    <category>
+        <pattern>ABOUT CHATBOT</pattern>
+        <template>
+            I'm your personal health care assistant, silly!
+        </template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU HELP ME</pattern>
+        <template>
+            <srai>NEW QUERY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>I NEED HELP</pattern>
+        <template>
+            <srai>NEW QUERY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CAN YOU PROVIDE SOME CURE FOR MY DISEASE</pattern>
+        <template>
+            <srai>NEW QUERY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELP ME</pattern>
+        <template>
+            <srai>NEW QUERY</srai>
+        </template>
+    </category>
+    <category>
+    	<pattern>ASK MORE</pattern>
+    	<template>
+    		<random>
+    			<li>Tell me few more symptoms.</li>
+    			<li>Tell me more! i will help you.</li>
+    			<li>Tell me more about your disease.</li>
+
+    		</random>
+    	</template>
+ 
+    </category>
+
+
+    <category>
+    	<pattern>NEW QUERY</pattern>
+    	<template>
+    		<random>
+    			<li>What has exactly happened to you?</li>
+    			<li>Whats wrong with you my friend?</li>
+    		</random>
+    	</template>
+ 
+    </category>
+
+
+
+
+
+
+
+</aiml>
