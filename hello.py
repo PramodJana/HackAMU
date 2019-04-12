@@ -2,8 +2,8 @@ from flask import Flask,render_template,request,url_for,redirect,session,jsonify
 import sqlite3 as sq
 import hashlib
 import random
-# from chat import Bot
-# k = Bot()
+from nlp import NLP
+k = NLP()
 
 app=Flask(__name__)
 
@@ -20,7 +20,7 @@ def about():
 
 @app.route("/chatbot")
 def chatbot():
-	# k.refresh()
+	k.refresh()
 	return render_template('chat.html')
 
 
@@ -28,8 +28,9 @@ def chatbot():
 @app.route('/ask', methods = ["POST"])
 def ask():
 	msg  = request.form['messageText']
-	#ans  = k.response(msg)
-	ans  = 'ChatBot Response'
+	print(msg)
+	ans  = list(k.processing(msg))[1]
+	#ans  = 'ChatBot Response'
 	return jsonify({'status':'OK','answer':ans})
 
 
