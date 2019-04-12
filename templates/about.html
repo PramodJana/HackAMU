@@ -23,7 +23,7 @@
         font-size: 20px;
     }
     body {
-        background-image: url("about.jpg");
+        background-image: url("{{url_for('static',filename = 'about.jpg')}}");
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
@@ -37,7 +37,7 @@ background-size: 100%;
     <!-- starting header section -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #855400">
           <div class="animated infinite pulse">  <a class="navbar-brand" href="#">
-              <img src="img/logo.PNG" style="width: 260px;height: 62px;">
+              <img src="{{url_for('static',filename = 'img/logo.PNG')}}" style="width: 260px;height: 62px;">
             </a>
             </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,13 +47,13 @@ background-size: 100%;
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: 'Manuale', serif;">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="../">Home</a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link" href="#">Chat Bot</a>
+                    <a class="nav-link" href="chatbot">Chat Bot</a>
                   </li>
             <li class="nav-item active">
-              <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="about">About Us <span class="sr-only">(current)</span></a>
             </li>
         </div>
       </nav>
@@ -80,7 +80,7 @@ background-size: 100%;
 
                 </div>
                 <div class="col">
-                        <img class="img-fluid" src="img/pramod.JPG" style="height:400px">
+                        <img class="img-fluid" src="{{url_for('static',filename = 'img/pramod.JPG')}}" style="height:400px">
 
                 </div>
 
@@ -94,7 +94,7 @@ background-size: 100%;
           <div class="container wow fadeInLeft" style="color: aliceblue;font-size: 40px; font-family: 'Manuale', serif;">
                 <div class="row">
                         <div class="col">
-                                <img class="img-fluid" src="img/shubham.jpeg" style="height:400px">
+                                <img class="img-fluid" src="{{url_for('static',filename = 'img/shubham.jpeg')}}" style="height:400px">
         
                         </div>
                    
@@ -124,7 +124,7 @@ background-size: 100%;
         
                         </div>
                         <div class="col">
-                                <img class="img-fluid" src="img/pramod1.jpg" style="height:400px">
+                                <img class="img-fluid" src="{{url_for('static',filename = 'img/pramod1.jpg')}}" style="height:400px">
         
                         </div>
         

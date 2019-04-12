@@ -52,7 +52,6 @@ class Bot:
 				if i not in tmp:
 					tmp.add(i)
 				flag = True
-		print(tmp)
 
 		for i in tmp:
 			self.symptoms.add(i)
