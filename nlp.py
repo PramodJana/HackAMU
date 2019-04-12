@@ -9,6 +9,15 @@ data2 = pd.read_excel('Dataset.xlsx')
 sym2=data2.columns.tolist()[1:]
 
 cure=dict()
+cure['Ischemic heart disease']='https://www.baptisthealth.com/pages/services/heart-care/conditions/ischemic-heart-disease.aspx'
+cure['Stroke']='https://www.medicalnewstoday.com/articles/7624.php'
+cure['Tuberculosis']='https://www.mayoclinic.org/diseases-conditions/tuberculosis/symptoms-causes/syc-20351250'
+
+
+
+
+
+
 import aiml
 Doc = aiml.Kernel()
 Doc.bootstrap(learnFiles = "aiml/std-startup.xml", commands = "load aiml b")
@@ -22,7 +31,7 @@ class NLP:
 		self.greet = True
 		self.status = 1
 		self.dis = data
-		self.ignore_words=['are','is','am','were','i','he','she','it','you','your','yours','we','they','them','me','mine','hers','her','him','his'] 
+		self.ignore_words=['are','is','am','were','hello','hi','i','he','she','it','you','your','yours','we','they','them','for','from','at','by','me','mine','hers','her','him','his'] 
 
 
 
@@ -56,7 +65,7 @@ class NLP:
 		for i in tmp:
 			self.symptoms.add(i)
 			dise = self.findDisease(i)
-			print(dise)
+			#print(dise)
 			if len((self.disease).intersection(dise))==0:
 				self.disease = self.disease.union(dise)
 			else:
@@ -104,7 +113,7 @@ class NLP:
 
 		k = self.verifySymptoms()
 		if len(self.disease)==1:
-			return (1,'You are suffering from '+','.join(self.disease)+'<br>'+'<a href ='+'cure[list(self.disease)[0]]'+'>Cure</a><br>')
+			return (1,'You are suffering from '+','.join(self.disease)+'<br>'+'<a href ='+cure[list(self.disease)[0]]+'>Cure</a><br>')
 
 
 		elif k:
